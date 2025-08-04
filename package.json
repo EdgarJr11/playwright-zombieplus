@@ -9,6 +9,10 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.53.2",
-    "@types/node": "^24.0.10"
+    "@types/node": "^24.0.10",
+    "@faker-js/faker": "^9.9.0"
+
+  },
+  "dependencies": {
   }
 }
