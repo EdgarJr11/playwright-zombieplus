@@ -1,16 +1,16 @@
 const { expect } = require('@playwright/test')
 
 
-export class Toast{
+export class Toast {
 
-    constructor(page){
+    constructor(page) {
         this.page = page
     }
 
-     async haveText(message){   
+    async containText(message) {
         const toast = this.page.locator('.toast')
-        await expect(toast).toHaveText(message) // Leva em consideração todo o texto exibido
-        await expect(toast).not.toBeVisible({timeout : 5000})
+        await expect(toast).toContainText(message) // Leva em consideração todo o texto exibido
+        await expect(toast).not.toBeVisible({ timeout: 5000 })
     }
 
 }

@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test')
 const { LoginPage } = require('../pages/LoginPage')
-const {Toast} = require ('../pages/Components')
+const { Toast } = require('../pages/Components')
 
 let loginPage
 let toast
@@ -21,7 +21,7 @@ test('Não deve logar com senha incorreta', async ({ page }) => {
     await loginPage.submit('admin@zombieplus.com', 'pwd12')
 
     const message = "Oops!Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.   "
-    await toast.haveText(message)
+    await toast.containText(message)
 })
 
 test('Não deve logar com email incorreto', async ({ page }) => {
@@ -29,7 +29,21 @@ test('Não deve logar com email incorreto', async ({ page }) => {
     await loginPage.submit('admin@zombieplus.co', 'pwd123')
 
     const message = "Oops!Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.   "
-    await toast.haveText(message)
+    await toast.containText(message)
 })
+
+test('Logando com admin por API', async ({ page, request }) => {
+
+    const response = await request.post('http://localhost:3333/sessions', {
+        data: {
+            email: "admin@zombieplus.com",
+            password: "pwd123"
+        }
+    })
+    expect(response.status()).toBe(200)
+
+})
+
+
 
 

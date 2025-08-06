@@ -1,0 +1,82 @@
+{
+  "create": {
+    "title": "a noite dos mortos vivos",
+    "overview": "Um grupo de pessoas tenta sobreviver em uma casa cercada por zumbis sedentos por carne",
+    "company": "Amazon Studios",
+    "release_year": 1970,
+    "featured": true,
+    "cover": "covers/a_noite_dos_mortos_vivos.png"
+  },
+  "o_despontar_dos_mortos": {
+    "title": "o_despontar_dos_mortos",
+    "overview": "Durante um apocalipse zumbi, sobreviventes se refugiam em um shopping center",
+    "company": "Sony Pictures",
+    "release_year": 1978,
+    "featured": true,
+    "cover": "covers/o_despontar_dos_mortos.png"
+  },
+  "exterminio": {
+    "title": "exterminio",
+    "overview": "Um vírus devastador transforma pessoas em criaturas violentas. Um homem acorda do coma em meio ao caos",
+    "company": "Columbia Pictures",
+    "release_year": 2003,
+    "featured": true,
+    "cover": "covers/exterminio.png"
+  },
+  "guerra_mundial_z": {
+    "title": "guerra_mundial_z",
+    "overview": "Um ex-agente da ONU percorre o mundo para conter uma pandemia zumbi global",
+    "company": "Netflix",
+    "release_year": 2013,
+    "featured": true,
+    "cover": "covers/guerra_mundial_z.png"
+  },
+  "invasao_zumbi": {
+    "title": "invasao_zumbi",
+    "overview": "Durante uma epidemia zumbi na Coreia do Sul, passageiros lutam para sobreviver em um trem para Busan",
+    "company": "Universal Pictures",
+    "release_year": 2016,
+    "featured": true,
+    "cover": "covers/invasao_zumbi.png"
+  },
+  "resident_evil": {
+    "title": "resident_evil",
+    "overview": "Uma equipe militar investiga um laboratório subterrâneo infestado por mortos-vivos criados por um vírus",
+    "company": "Amazon Studios",
+    "release_year": 2002,
+    "featured": false,
+    "cover": "covers/resident_evil.png"
+  },
+  "todo_mundo_quase_morto": {
+    "title": "todo_mundo_quase_morto",
+    "overview": "Dois amigos tentam sobreviver a um apocalipse zumbi com muito humor britânico",
+    "company": "Paramount Pictures",
+    "release_year": 2004,
+    "featured": false,
+    "cover": "covers/todo_mundo_quase_morto.png"
+  },
+  "zumbilandia": {
+    "title": "zumbilandia",
+    "overview": "Um grupo improvável sobrevive a um mundo dominado por zumbis com regras e muito sarcasmo",
+    "company": "Sony Pictures",
+    "release_year": 2009,
+    "featured": false,
+    "cover": "covers/zumbilandia.png"
+  },
+  "exercito_dos_mortos": {
+    "title": "exercito_dos_mortos",
+    "overview": "Um grupo de mercenários planeja um assalto em uma Las Vegas infestada por zumbis",
+    "company": "Columbia Pictures",
+    "release_year": 2021,
+    "featured": false,
+    "cover": "covers/exercito_dos_mortos.png"
+  },
+  "rec": {
+    "title": "rec",
+    "overview": "Repórteres ficam presos em um prédio em quarentena após um surto zumbi em Barcelona",
+    "company": "Universal Pictures",
+    "release_year": 2007,
+    "featured": false,
+    "cover": "covers/rec.png"
+  }
+}
