@@ -1,13 +1,13 @@
 const { expect } = require('@playwright/test')
 
-export class MoviesPage {
+export class Movies {
     constructor(page) {
         this.page = page
     }
 
     async create(title, overview, company, release_year) {
         await this.page.locator('a[href$="/register"]').click()
-        await this.page.locator('#title').fill(title) 
+        await this.page.locator('#title').fill(title)
         await this.page.getByLabel('Sinopse').fill(overview)
 
         await this.page.locator('#select_company_id .react-select__indicator')
@@ -23,13 +23,22 @@ export class MoviesPage {
             .filter({ hasText: release_year })
             .click()
 
-        await this.page.getByRole('button', {name: 'Cadastrar'}).click()
+        await this.page.getByRole('button', { name: 'Cadastrar' }).click()
     }
- async isLoggedIn() {
-       
+    async isLoggedIn() {
 
         await this.page.waitForLoadState('networkidle') //só valida a URL depois de todo o tráfego de rede for concluído (Renderização, chamada de api, etc)
         await expect(this.page).toHaveURL(/.*movies/)
 
+    }
+
+    async bottonRegister(){
+     await this.page.locator('a[href$="/register"]').click()
+     await this.page.getByRole('button', { name: 'Cadastrar' }).click()
+
+    }
+
+    async alertHaveText(target) {
+        await expect(this.page.locator('.alert')).toHaveText(target)
     }
 }

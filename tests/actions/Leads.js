@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test')
 
-export class LandingPage {
+export class Leads {
 
     constructor(page) {
         this.page = page
@@ -25,7 +25,6 @@ export class LandingPage {
 
         await this.page.getByPlaceholder('informe seu email').fill(email)
         await this.page.getByText(/Quero entrar na fila/).click()
-
     }
 
     async messageSucess() {
