@@ -1,9 +1,9 @@
 const {test: base , expect} = require('@playwright/test')
 
-const { Login } = require('../actions/Login')
-const { Toast } = require('../actions/Components')
-const { Movies } = require('../actions/Movies')
-const {Leads} = require ('../actions/Leads')
+const { Login } = require('./actions/Login')
+const { Toast } = require('./actions/Components')
+const { Movies } = require('./actions/Movies')
+const {Leads} = require ('./actions/Leads')
 
 
 const test = base.extend({
@@ -17,8 +17,6 @@ const test = base.extend({
         context['toast'] = new Toast(page)
 
         await use(context)
-
     }
 })
-
 export {test, expect}

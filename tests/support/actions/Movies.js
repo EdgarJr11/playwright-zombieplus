@@ -5,7 +5,7 @@ export class Movies {
         this.page = page
     }
 
-    async create(title, overview, company, release_year) {
+    async create(title, overview, company, release_year, movie) {
         await this.page.locator('a[href$="/register"]').click()
         await this.page.locator('#title').fill(title)
         await this.page.getByLabel('Sinopse').fill(overview)
@@ -22,6 +22,10 @@ export class Movies {
         await this.page.locator('.react-select__option')
             .filter({ hasText: release_year })
             .click()
+
+        await this.page.locator('input[name=cover]').setInputFiles(`tests/support/fixtures/${movie.cover}`)
+
+        await this.page.locator('.featured .react-switch').click()
 
         await this.page.getByRole('button', { name: 'Cadastrar' }).click()
     }

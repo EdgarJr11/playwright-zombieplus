@@ -15,7 +15,8 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   testIgnore: [
-    '**/support/**'
+    '**/support/**',
+    '**/index.js/**'
   ],
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -42,6 +43,7 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+    
 
     //{
     //  name: 'firefox',
@@ -72,7 +74,7 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  ],
+  ]
 
   /* Run your local dev server before starting the tests */
   // webServer: {
